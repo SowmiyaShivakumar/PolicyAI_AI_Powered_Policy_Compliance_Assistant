@@ -102,8 +102,6 @@ The backend orchestrates five agents in sequence:
 
 - Milvus
 - Neo4j
-- MinIO
-- etcd
 - Attu
 
 ## Running the project
@@ -132,26 +130,22 @@ MILVUS_HOST=localhost
 MILVUS_PORT=19530
 NEO4J_URI=bolt://localhost:7687
 NEO4J_USER=neo4j
-NEO4J_PASSWORD=neopassword
+NEO4J_PASSWORD=password
 ```
 
 Notes:
 
-- The code defaults `NEO4J_PASSWORD` to `password`, but `docker-compose.yml` starts Neo4j with `neopassword`, so set it explicitly in `.env`.
+- The code defaults `NEO4J_PASSWORD` to `password`, but `docker-compose.yml` starts Neo4j with `password`, so set it explicitly in `.env`.
 - Embeddings use `text-embedding-3-small`.
-- The agents use `gpt-4o` and the evaluation metrics use `gpt-4o-mini`.
+- The agents use `gpt-4o-mini` and the evaluation metrics use `gpt-4o`.
 
 ### 3. Install Python dependencies
-
-The repo does not currently include a `requirements.txt` or `pyproject.toml`, so install dependencies manually in your backend virtual environment.
 
 Likely required packages based on the imports in `backend/`:
 
 ```powershell
 pip install fastapi uvicorn python-dotenv openai langchain-openai langchain-core pymilvus neo4j rank-bm25 pdfplumber requests pydantic deepeval presidio-analyzer presidio-anonymizer
 ```
-
-If you do not want PII anonymization/output PII checks yet, Presidio is optional.
 
 ### 4. Run the ingestion pipeline
 
@@ -292,18 +286,3 @@ The API proxy is configured in [`frontend/vite.config.js`](frontend/vite.config.
 - [`backend/retrieval/hybrid_search.py`](backend/retrieval/hybrid_search.py): retrieval-only API helper
 - [`backend/guardrails/input_guardrail.py`](backend/guardrails/input_guardrail.py): query validation
 - [`frontend/src/App.jsx`](frontend/src/App.jsx): root React app
-
-## Known gaps and implementation notes
-
-- There is no root/backend Python dependency manifest yet.
-- The comment in [`backend/app.py`](backend/app.py) mentions port `8000`, but the frontend proxy expects `8001`.
-- `backend/.env` exists locally in this workspace, but it should not be committed with secrets.
-- The frontend includes `node_modules/` in the repo right now, which is usually not committed.
-
-## Suggested next improvements
-
-- Add a `requirements.txt` or `pyproject.toml`
-- Add a root `.gitignore` if one is missing or incomplete
-- Add sample `.env.example`
-- Add backend tests for API routes and guardrails
-- Add a one-command local bootstrap script
