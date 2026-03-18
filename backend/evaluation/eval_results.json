@@ -1,0 +1,30 @@
+{
+  "summary": {
+    "Answer Relevancy": {
+      "average_score": 0.81,
+      "passed": 6,
+      "total": 7,
+      "pass_rate": "86%"
+    },
+    "Faithfulness": {
+      "average_score": 0.971,
+      "passed": 7,
+      "total": 7,
+      "pass_rate": "100%"
+    },
+    "Contextual Precision": {
+      "average_score": 1.0,
+      "passed": 7,
+      "total": 7,
+      "pass_rate": "100%"
+    },
+    "Contextual Recall": {
+      "average_score": 0.881,
+      "passed": 7,
+      "total": 7,
+      "pass_rate": "100%"
+    }
+  },
+  "overall_score": 0.915,
+  "test_cases_run": 7
+}
