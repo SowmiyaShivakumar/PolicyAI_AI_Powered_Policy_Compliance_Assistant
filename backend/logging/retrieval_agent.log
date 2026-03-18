@@ -1,0 +1,26 @@
+2026-03-18 17:21:10,781 
+[Agent 1 - Retrieval] Query: Who is responsible for cybersecurity risk objectives?
+2026-03-18 17:21:12,011 [Retrieval] Keywords: cybersecurity risk objectives
+2026-03-18 17:21:12,059 [Retrieval] Intent: {'functions': ['GOVERN'], 'categories': ['Roles and Responsibilities', 'Risk Management Strategy']}
+2026-03-18 17:21:12,059 [Agent 1 - Retrieval] Running Milvus + Neo4j in parallel...
+2026-03-18 17:21:12,060 [Retrieval - Milvus] Metadata filter: nist_function=GOVERN
+2026-03-18 17:21:12,467 [Retrieval - Neo4j] ['GV.RR-04', 'GV.RR-03', 'GV.RR-02', 'GV.RR-01', 'GV.RM-07', 'GV.SC-10']
+2026-03-18 17:21:13,640 [Retrieval - Milvus] ['GV.OC-01', 'GV.RR-01', 'GV.RM-01', 'GV.RR-02', 'GV.OV-01', 'GV.OV-03']
+2026-03-18 17:21:13,640 
+[Retrieval] Final merged:
+2026-03-18 17:21:13,641   GV.RR-04     score=1.000  source=neo4j
+2026-03-18 17:21:13,641   GV.RR-03     score=1.000  source=neo4j
+2026-03-18 17:21:13,641   GV.RM-07     score=0.950  source=neo4j
+2026-03-18 17:21:13,642   GV.RR-01     score=0.812  source=milvus+neo4j
+2026-03-18 17:21:13,642   GV.OC-01     score=0.700  source=vector
+2026-03-18 17:21:13,642   GV.RR-02     score=0.602  source=milvus+neo4j
+2026-03-18 17:21:13,715 
+[Agent 1 - Retrieval] Graph context:
+2026-03-18 17:21:13,716   [GV.RR-04] Roles and Responsibilities | policies: ['Security Awareness and Training Policy', 'Physical and Environmental Protection Policy']
+2026-03-18 17:21:13,716   [GV.RR-03] Roles and Responsibilities | policies: ['Standard Risk Assessment Policy', 'Information Security Risk Management']
+2026-03-18 17:21:13,717   [GV.RM-07] Risk Management Strategy | policies: ['Standard Risk Assessment Policy', 'Information Security Risk Management']
+2026-03-18 17:21:13,718   [GV.RR-01] Roles and Responsibilities | policies: ['Security Awareness and Training Policy', 'Information Security Policy']
+2026-03-18 17:21:13,718   [GV.OC-01] Organizational Context | policies: ['Information Security Policy']
+2026-03-18 17:21:13,719   [GV.RR-02] Roles and Responsibilities | policies: ['Security Awareness and Training Policy', 'Information Security Policy']
+2026-03-18 17:21:13,719 
+[Agent 1 - Retrieval] Final chunks after re-ranking: ['GV.RR-04', 'GV.RR-03', 'GV.RM-07', 'GV.RR-01', 'GV.OC-01', 'GV.RR-02']

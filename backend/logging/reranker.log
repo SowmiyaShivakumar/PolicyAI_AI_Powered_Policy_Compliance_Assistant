@@ -1,0 +1,10 @@
+2026-03-18 17:21:13,710 [Re-ranker] Authority map built: 7 policies
+2026-03-18 17:21:13,711 
+[Re-ranker] Re-ranking 6 chunks | type=INFO
+2026-03-18 17:21:13,711 [Re-ranker] Results:
+2026-03-18 17:21:13,712   GV.RR-04     final=1.000  merge=1.000  authority=1.00  phase=1.00  fn=GOVERN
+2026-03-18 17:21:13,712   GV.RR-03     final=1.000  merge=1.000  authority=1.00  phase=1.00  fn=GOVERN
+2026-03-18 17:21:13,713   GV.RM-07     final=0.975  merge=0.950  authority=1.00  phase=1.00  fn=GOVERN
+2026-03-18 17:21:13,713   GV.RR-01     final=0.906  merge=0.812  authority=1.00  phase=1.00  fn=GOVERN
+2026-03-18 17:21:13,714   GV.OC-01     final=0.850  merge=0.700  authority=1.00  phase=1.00  fn=GOVERN
+2026-03-18 17:21:13,714   GV.RR-02     final=0.801  merge=0.602  authority=1.00  phase=1.00  fn=GOVERN

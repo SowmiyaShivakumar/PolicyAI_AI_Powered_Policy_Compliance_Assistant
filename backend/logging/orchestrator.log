@@ -1,0 +1,17 @@
+2026-03-18 17:21:04,499 
+==================================================
+2026-03-18 17:21:04,500   Query: Who is responsible for cybersecurity risk objectives?
+2026-03-18 17:21:04,500 ==================================================
+2026-03-18 17:21:10,780 [Guardrail] Input valid. Running agents...
+2026-03-18 17:21:27,823 
+==================================================
+2026-03-18 17:21:27,823   FINAL RESULT
+2026-03-18 17:21:27,824 ==================================================
+2026-03-18 17:21:27,824   Query Type : INFO
+2026-03-18 17:21:27,825   Verdict    : INFO
+2026-03-18 17:21:27,825   Score      : N/A (info query)
+2026-03-18 17:21:27,826   Risk       : LOW
+2026-03-18 17:21:27,826   Escalate   : False
+2026-03-18 17:21:27,827   Summary    : The Information Security Policy states that the Chief Information Security Officer (CISO) is responsible for cybersecurity risk objectives.
+2026-03-18 17:21:27,827   Tokens     : 327 (in=220 out=107) ~$0.00162
+2026-03-18 17:21:27,827 ==================================================
